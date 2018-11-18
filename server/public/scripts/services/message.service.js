@@ -10,6 +10,10 @@ myApp.service('MessageService', ['$http', '$location', function ($http, $locatio
         list: []
     };
 
+    let convert = 1486785126 * 1000;
+    let time = new Date(convert).toLocaleString();
+    console.log(time);
+
     // GET
     self.getHotels = function () {
         $http.get('json/hotels.json')
@@ -30,7 +34,8 @@ myApp.service('MessageService', ['$http', '$location', function ($http, $locatio
             });
     }// End GET 
 
-    self.getData = function () {
+    self.getSelectedGuestData = function (guest) {
+        console.log(guest);
 
     }
 
