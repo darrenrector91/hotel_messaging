@@ -1,26 +1,34 @@
 <body class="container">
+    <!-- {{mc.singleGuest}} -->
+    <!-- {{mc.singleHotel}} -->
+    <!-- {{mc.visit}} -->
     <md-content layout-padding class="messageForm" layout-align="center center">
         <form layout-align="center center">
             <md-input-container>
                 <label>Guest</label>
-                <md-select ng-model="mc.guestName">
+                <md-select ng-model="guest">
                     <md-option><em></em>None</em></md-option>
-                    <md-option ng-repeat="guest.id as guest.name for guest in mc.guests.list track by guest.id"
-                        ng-value="guest.firstName" ng-change="getName()">
+                    <md-option ng-repeat="guest in mc.guests.list" ng-value="guest">
                         {{guest.firstName}} {{guest.lastName}}
                     </md-option>
                 </md-select>
             </md-input-container>
             <md-input-container>
                 <label>Hotel</label>
-                <md-select ng-model="mc.hotel">
+                <md-select ng-model="hotel">
                     <md-option><em>None</em></md-option>
-                    <md-option ng-repeat="name in mc.hotels.list" ng-value="name.company">
-                        {{name.company}}
+                    <md-option ng-repeat="hotel in mc.hotels.list" ng-value="hotel">
+                        {{hotel.company}}
                     </md-option>
                 </md-select>
             </md-input-container>
-            <md-button class="md-raised md-primary" ng-click="mc.getSelectedGuestData(guest)">Send message</md-button>
+            <md-button class="md-raised md-primary" ng-click="mc.getSelectedGuestData(guest, hotel)">Send message</md-button>
         </form>
     </md-content>
+
+    <h2>"Good {{mc.visit}} {{guest.firstName}}, and welcome to {{hotel.company}}! Room
+        {{guest.reservation.roomNumber}} is
+        now ready for you. Enjoy
+        your stay and let us know if you need anything."
+    </h2>
 </body>
