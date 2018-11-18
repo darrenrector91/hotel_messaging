@@ -1,0 +1,26 @@
+{
+  "name": "hotel_messages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.5",
+    "angular-animate": "^1.7.5",
+    "angular-aria": "^1.7.5",
+    "angular-material": "^1.1.10",
+    "angular-messages": "^1.7.5",
+    "angular-route": "^1.7.5",
+    "express": "^4.16.4",
+    "nexmo": "^2.4.0",
+    "pg": "^7.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.6"
+  }
+}

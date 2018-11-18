@@ -1,0 +1,34 @@
+<body class="container">
+    <md-content layout-padding class="messageForm" layout-align="center center">
+        <form layout-align="center center">
+            <md-input-container>
+                <label>Guest</label>
+                <md-select ng-model="ctrl.guestName">
+                    <md-option><em></em>None</em></md-option>
+                    <md-option ng-repeat="guest in mc.guests.list" ng-value="guest.firstName">
+                        {{guest.firstName}} {{guest.lastName}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+            <!-- <md-input-container>
+                <label>Room</label>
+                <md-select ng-model="ctrl.guestRoom">
+                    <md-option><em>None</em></md-option>
+                    <md-option ng-repeat="guest in mc.guests.list" ng-value="guest.reservation.roomNumber">
+                        {{guest.reservation.roomNumber}}
+                    </md-option>
+                </md-select>
+            </md-input-container> -->
+            <md-input-container>
+                <label>Hotel</label>
+                <md-select ng-model="ctrl.hotel">
+                    <md-option><em>None</em></md-option>
+                    <md-option ng-repeat="name in mc.hotels.list" ng-value="name.company">
+                        {{name.company}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+            <md-button class="md-raised md-primary" ng-click=>Send message</md-button>
+        </form>
+    </md-content>
+</body>
