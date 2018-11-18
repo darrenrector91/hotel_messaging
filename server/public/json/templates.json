@@ -1,0 +1,5 @@
+[{
+    "id": 1,
+    "template": "Good {{time_of_day}} {{guest}}, and welcome to {{hotel}}! Room {{roomNum}} is now ready you. Enjoy your stay and let us know if you need anything."
+
+}]
